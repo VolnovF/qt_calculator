@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QObject::connect(ui->lineEdit_Expression, SIGNAL(returnPressed()), this, SLOT(on_pushButton_Calculate_clicked()));
 }
 
 MainWindow::~MainWindow()
